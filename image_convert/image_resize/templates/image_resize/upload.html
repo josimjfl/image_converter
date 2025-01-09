@@ -1,0 +1,29 @@
+<!-- image_convert/templates/image_convert/upload.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Conversion form JFL IT Lab</title>
+</head>
+<body>
+    <h1>Upload an Image to Convert</h1>
+    
+    <!-- Form to upload image -->
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <!-- Input field for the image upload -->
+        <label for="image">Choose an image to upload:</label>
+        <input type="file" name="image" id="image" required>
+        
+        <button type="submit">Convert</button>
+    </form>
+    
+    {% if message %}
+        <p>{{ message }}</p>
+        <p>View the converted image (500px * 500px) and small size: <a href="{{ converted_image_url }}" target="_blank">Click here</a></p>
+        <img src="{{ converted_image_url }}">
+    {% endif %}
+</body>
+</html>
