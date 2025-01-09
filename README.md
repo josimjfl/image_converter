@@ -1,5 +1,5 @@
 # image_converter
-resize image, edit photo, resize to upload image in web.
+online resize image, edit photo, resize to upload image in web.
 Pillow, the Python Imaging Library (PIL) fork, provides a wide range of tools for image manipulation. Below is an overview of the major tools and functions you can use from Pillow:
 
 ### 1. **Opening and Saving Images:**
